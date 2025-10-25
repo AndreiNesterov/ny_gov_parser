@@ -34,7 +34,7 @@ The 10 records will be saved in the file *n9v6_gdp6_results.html*, which is in t
 
 ### Sample of screen output
 
-Open the file *n9v6_gdp6_results.html* in your browser. Or see the screenshot:
+Download and open the file [n9v6_gdp6_results.html](n9v6_gdp6_results.html) in your browser. Or see the screenshot:
 
 ![Screenshot of the script output](screenshot_sample.png)
 
