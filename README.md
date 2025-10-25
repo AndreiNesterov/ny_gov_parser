@@ -1,14 +1,15 @@
 # Demo: A parser for the Active Corporation dataset by NY Open Data
 
-This Python script retrieves and displays 10 records from the dataset "Active Corporations: Beginning 1800" by the New York State Department of State using [the dataset API](https://data.ny.gov/d/n9v6-gdp6).
+This Python script retrieves 10 records from the dataset "Active Corporations: Beginning 1800" by the New York State Department of State using [the dataset API](https://data.ny.gov/d/n9v6-gdp6).
 
-> [!Important note on "the last 10 additions to the register"]
+> [!IMPORTANT]
+> Note on "the last 10 additions to the register".
 
-> When this dataset is updated by the publisher, all its records are created and updated at the same time, as the system SODA fields **:updated_at** and **:created_at** show (see [the SODA documentation](https://dev.socrata.com/docs/system-fields.html)). It results in all records having the same timestamp. So, it is impossible to determine what records were "the latest".
+> When this dataset is updated by the publisher, all its records are created and updated at the same time, as the system SODA fields *:updated_at and *:created_at* show (see [the SODA documentation](https://dev.socrata.com/docs/system-fields.html)). It results in all records having the same timestamp. So, it is impossible to determine what records were "the latest".
 
-> Among the API fields of this dataset, there is only one containing a timestamp, which is **initial_dos_filing_date** (Initial DOS Filing Date), indicating when a company was incorporated. The script sorts the records by this field in descending order (from newest to oldest) and requests the first 10. 
+> Among the API fields of this dataset, there is only one containing a timestamp, which is *initial_dos_filing_date* (Initial DOS Filing Date), indicating when a company was incorporated. The script sorts the records by this field in descending order (from newest to oldest) and requests the first 10.
 
-> For example, in the version of the dataset from 22.10.2025, there were 1001 records with the same value of **initial_dos_filing_date**. So, the script displays the first 10 of these 1001 records sorted by this field. How exactly these records are sorted by default is unclear.
+> For example, in the version of the dataset from 22.10.2025, there were 1001 records with the same value of *initial_dos_filing_date*. So, the script displays the first 10 of these 1001 records sorted by this field. How exactly these records are sorted by default is unclear.
 
 ## Instructions
 
@@ -20,10 +21,10 @@ If you have Jyputer Notebook installed, open ny_gov_parser.ipynb and run the cel
 
 ### Terminal
 
-1. Navigate to your local script directory
+1. Navigate to your local script directory. Insert your full path to *ny_gov_parser* directory
 
 ```
-cd **here goes your full path to ny_gov_parser**
+cd ny_gov_parser
 ```
 
 2. Run the script
@@ -32,11 +33,13 @@ cd **here goes your full path to ny_gov_parser**
 python ny_gov_parser.py
 ```
 
-The 10 records will be saved in the file **n9v6_gdp6_results.html**, which is in the same directory as the script. Open it in your browser. To get an updated version of the records, run the script again. The file will be overwritten.
+The 10 records will be saved in the file *n9v6_gdp6_results.html*, which is in the same directory as the script. Open it in your browser. To get an updated version of the records, run the script again. The file will be overwritten.
 
 ### Sample of screen output
 
-See n9v6_gdp6_results.html.
+Open the file *n9v6_gdp6_results.html* in your browser. Or see the screenshot:
+
+![Screenshot of the script output]()
 
 ### References
 
