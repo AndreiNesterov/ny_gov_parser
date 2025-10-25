@@ -4,7 +4,7 @@ This Python script retrieves 10 records from the dataset "Active Corporations: B
 
 > [!IMPORTANT]
 > Note on "the last 10 additions to the register".
-> When this dataset is updated by the publisher, all its records are created and updated at the same time, as the system SODA fields *:updated_at and *:created_at* show (see [the SODA documentation](https://dev.socrata.com/docs/system-fields.html)). It results in all records having the same timestamp. So, it is impossible to determine what records were "the latest".
+> When this dataset is updated by the publisher, all its records are created and updated at the same time, as the system SODA fields *:updated_at* and *:created_at* show (see [the SODA documentation](https://dev.socrata.com/docs/system-fields.html)). It results in all records having the same timestamp. So, it is impossible to determine what records were "the latest".
 > Among the API fields of this dataset, there is only one containing a timestamp, which is *initial_dos_filing_date* (Initial DOS Filing Date), indicating when a company was incorporated. The script sorts the records by this field in descending order (from newest to oldest) and requests the first 10.
 > For example, in the version of the dataset from 22.10.2025, there were 1001 records with the same value of *initial_dos_filing_date*. So, the script displays the first 10 of these 1001 records sorted by this field. How exactly these records are sorted by default is unclear.
 
